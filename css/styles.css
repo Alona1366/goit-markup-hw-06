@@ -8,7 +8,7 @@
     /* others */
     --indent: 30px;
     --items: 3;
-    --animation: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    --animation: 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 }
 
 .link {
@@ -51,6 +51,20 @@ ol {
     padding: 0;
     margin: 0;
 }
+
+.visuaaly-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
+
 /* ============= /PARTIAL RESET OF STYLES END ============= */
 
 /* ============= CARD SET ============= */
@@ -535,6 +549,10 @@ color: var(--primary-color);
 
 /* ============= SOCIAL ICONS FOOTER ============= */
 
+.footer-social {
+    margin-right: 93px;
+}
+
 .footer-socials-list {
     display: flex;
     align-items: center;
@@ -567,6 +585,82 @@ color: var(--primary-color);
 }
 
 /* ============= /SOCIAL ICONS FOOTER ============= */
+
+/* ============= SUBMIT FORM FOOTER ============= */
+
+.footer-submit {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.submit-form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* .submit-lable {
+    display: flex;
+    flex-direction: column;
+} */
+
+.submit-title {
+    margin-bottom: 20px;
+    
+        font-family: var(--primary-font-family);
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.14;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: var(--secondary-color);
+}
+
+.mail-input-button {
+    display: flex;
+    justify-content: center;
+}
+
+.submit-input {
+    width: 358px;
+    padding: 15px 16px;
+    margin-right: 12px;
+    background-color: transparent;
+    color: var(--secondary-color);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+}
+
+.submit-button {
+    display: flex;
+   
+    align-items: center;
+    padding: 10px 28px;
+
+    background: var(--accent-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: transparent;
+}
+
+.sumbit-title {
+    margin-right: 10px;
+
+    font-family: var(--primary-font-family);
+        font-weight: 700;
+        font-size: 14px;
+        line-height: calc(30/16);
+        letter-spacing: 0.06em;
+        
+        color: var(--secondary-color);
+}
+
+.button-icon {
+    fill: var(--secondary-color);
+}
+
+/* ============= /SUBMIT FORM FOOTER ============= */
 
 /* ============= /FOOTER ============= */
 
@@ -849,6 +943,7 @@ fill: currentColor;
 
     width: 528px;
     height: 581px;
+    padding: 40px 39px 40px 41px;
     background-color: var(--secondary-color);
     border-radius: 4px;
 
@@ -872,7 +967,187 @@ fill: currentColor;
     border-radius: 50%;
     border: 1px solid rgba(0, 0, 0, 0.1);
     background-color: transparent;
-    cursor: pointer;
+    cursor: pointer;    
+}
+
+.modal-btn-icon:hover {
+    fill: var(--accent-color); 
+    transition: fill var(--animation);
 }
 
 /* ============= /MODAL WINDOW ============= */
+
+/* ============= MODAL FORM ============= */
+
+.register-form {
+    text-align: center;
+}
+
+.register-form-title {
+    display: block;
+    margin-bottom: 12px;
+
+    text-align: center;
+    font-family: var(--primary-font-family);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+    
+    color: var(--primary-color);
+}
+
+.register-form-group {
+    margin-bottom: 20px;
+}
+
+.register-form-wrap {
+    position: relative;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.register-form-wrap:last-child {
+    margin-bottom: 0;
+}
+
+.register-form-label {
+    display: block;
+    text-align: left;
+    margin-bottom: 4px;
+    padding-left: 0px;
+
+    font-family: var(--primary-font-family);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.166;
+        
+    letter-spacing: 0.01em;
+    
+    color: #757575;
+}
+
+.register-form-icon {
+    color: var(--primary-color);
+    transition: fill var(--animation);
+}
+
+.register-form-input:focus-within,
+.register-form-input:hover {
+    border-color: var(--accent-color);
+    
+}
+
+.register-form-input:focus-within + .fregister-form-icon,
+.register-form-input:hover + .register-form-icon {
+    fill: var(--accent-color);
+    
+}
+
+.register-form-input,
+.register-form-message {
+    width: 100%;
+    
+    padding: 11px;
+    padding-left: 42px;
+    
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    outline: transparent;
+    transition: border-color var(--animation);
+}
+
+.register-form-message {
+    padding: 12px 16px;
+    height: 120px;
+
+    font-family: var(--primary-font-family);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.166;
+    letter-spacing: 0.01em;
+    
+    color: rgba(117, 117, 117, 0.5);
+    resize: none;
+}
+
+.register-form-message:focus-within,
+.register-form-message:hover {
+    border-color: var(--accent-color);
+    color: var(--primary-color);
+    transition: border-color var(--animation);
+}
+
+.register-form-icon {
+    position: absolute;
+    bottom: 13px;
+    left: 14px;
+}
+
+.register-form-agreement {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 30px;
+}
+
+.register-checkbox:checked+.register-icon .register-icon-uncheck {
+    opacity: 0;
+    transition: opacity var(--animation);
+}
+
+.register-icon-check {
+    opacity: 0;
+    fill: var(--accent-color);
+    transition: opacity var(--animation), fill var(--animation);
+}
+
+.register-checkbox:checked+.register-icon .register-icon-check {
+    opacity: 1;
+}
+
+.register-form-agreement-text {
+    font-size: 14px;
+    user-select: none;
+    
+}
+
+.register-form-agreement-link {
+    text-decoration: underline;
+    text-underline-position: under;
+    color: var(--accent-color);
+}
+
+.register-form-btn {
+    display: inline-flex;
+    align-items: center;
+    
+    padding: 10px 52px;
+    
+    font-family: var(--primary-font-family);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    text-align: center;
+    letter-spacing: 0.06em;
+     
+    background: var(--accent-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    color: var(--secondary-color);
+    border: none;
+    
+    cursor: pointer;
+}
+
+.register-form-btn:hover {
+    background: #188CE8;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    transition: background var(--animation), box-shadow var(--animation);
+}
+/* ============= /MODAL FORM ============= */
